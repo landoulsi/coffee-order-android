@@ -9,8 +9,8 @@ class AddOrderActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityAddOrderBinding
 
-    val coffeeName by lazy { binding.name.text.toString() }
-    val order by lazy { OrderRequest(coffeeName, size, type) }
+    val clientName by lazy { binding.name.text.toString() }
+    val order by lazy { OrderRequest(clientName, size, type) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
