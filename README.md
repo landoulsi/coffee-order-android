@@ -38,4 +38,7 @@ where `basePrice` is the base Coffee Type price as descibed above
 - Try to find code, variables or constants that are not in the right place
 - Try to find missing code encapsulations
 - Explain how you can make the code more testable
-- It will much valudable if after all the improvements you done above, the code is still compiling and giving same result
+- It will be much valudable if after all the improvements you done above, the code is still compiling and giving same result
+
+## Video of the app
+https://github.com/landoulsi/coffee-order-android/blob/main/video.mov

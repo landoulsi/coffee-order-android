@@ -10,7 +10,7 @@ class AddOrderActivity : AppCompatActivity() {
     lateinit var binding: ActivityAddOrderBinding
 
     val clientName by lazy { binding.name.text.toString() }
-    val order by lazy { OrderRequest(clientName, size, type) }
+    val order by lazy { OrderRequest(name = clientName, size = size, type = type) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,18 +21,6 @@ class AddOrderActivity : AppCompatActivity() {
         handleUIChanges()
 
         binding.submit.setOnClickListener { submitOrder() }
-    }
-
-    fun calculateTotalPrice(): Double {
-        // Formula: basePrice + (basePrice * 0.25 * size)
-        // basePrice is per Coffee Type: Cappuccino (6$), Espresso (5$), Regular (4$)
-        // Size value: small -> 0, medium -> 1, large -> 2
-        // 0.25 is a constant factor
-
-        // Example: Espresso Large -> 5 + 5 * 0.25 * 2 = 7.5
-        // Example: Espresso Medium -> 5 + 5 * 0.25 * 1 = 6.25$
-        // Example: Espresso Small -> 5 + 5 * 0.25 * 0 = 5
-        return 0.0
     }
 
     private fun handleUIChanges() {
